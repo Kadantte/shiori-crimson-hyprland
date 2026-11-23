@@ -4,12 +4,30 @@
 
 A crimson-themed Hyprland / Wayland desktop setup featuring a GTK3 layer-shell HUD, application launcher, three Waybar bars, dock-state feedback, power menu and a dual-monitor desktop concept. Developed on Asura (Ubuntu 26.04, Hyprland 0.53.x). Owned/maintained by [Kadantte](https://github.com/Kadantte). Intended public repository: [Kadantte/shiori-crimson-hyprland](https://github.com/Kadantte/shiori-crimson-hyprland).
 
+## Screenshots
+
+A preview of Shiori Crimson running on **Asura**. These are real desktop captures, not installation previews; the appearance and monitor layout may change during beta development.
+
+### Desktop overview
+
+<p align="center">
+  <img src="assets/screenshots/shiori-desktop-overview.png" alt="Shiori Crimson Hyprland desktop on Asura, featuring a crimson wallpaper, Waybar and bottom dock" width="1000">
+</p>
+
+### Fastfetch system identity
+
+<p align="center">
+  <img src="assets/screenshots/shiori-fastfetch-asura.png" alt="Shiori Crimson themed Fastfetch terminal displaying Asura's system information" width="850">
+</p>
+
+> **Screenshots and artwork:** These images are supplied to demonstrate the project and include Shiori Crimson character art. Personal, non-commercial desktop use is allowed only as described in the [artwork license](assets/ASSET-LICENSE.md); separate redistribution, commercial use and sale require permission. Third-party logos and icons visible **inside screenshots** retain their respective owners' rights. Screenshots may show developer-specific system information and do not represent universal defaults.
+
 ## State of the project
 
 - **Real source imported:** 19 code/config files from the developer's working Asura snapshot, with provenance recorded in [`docs/source-provenance.json`](docs/source-provenance.json).
 - **Baseline:** v3.3.3.1 working desktop on Asura. **v3.4 engineering readiness remains open.** Don't interpret this source candidate as a finished v3.4 release.
 - **No automated installation:** some files are **templates**, and the HUD/power UI remain partially LG/Asura-specific. The current desktop is *not* modified by extracting the repo or running its static tests.
-- **Artwork:** no image binaries are included. Shiori artwork may be supplied later under the separate personal/non-commercial image license; third-party app icons are resolved from installed applications, not redistributed.
+- **Artwork:** only the two documentation screenshots below are included; deployable wallpaper/character-art binaries are not packaged. Screenshots follow the separate personal/non-commercial image license. Third-party app icons are resolved from installed applications, not redistributed as standalone images.
 
 ### Features in the source
 

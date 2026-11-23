@@ -1,1 +1,3 @@
 path,owner_or_licensor,source,permission_basis,public_distribution_approved,notes
+assets/screenshots/shiori-desktop-overview.png,Kadantte — owner-provided desktop screenshot,Provided by project maintainer 2026-11-23,Owner-approved inclusion for public README; separate original-art personal non-commercial license,yes,Historic v3.1-era capture; underlying art/third-party elements retain their own rights; no standalone redistribution permission
+assets/screenshots/shiori-fastfetch-asura.png,Kadantte — owner-provided desktop screenshot,Provided by project maintainer 2026-11-23,Owner-approved inclusion for public README; separate original-art personal non-commercial license,yes,"Displays developer username, hardware specifications and RFC1918 LAN IP; review before publishing"
