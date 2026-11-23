@@ -1,0 +1,25 @@
+{
+  "origin": "user-supplied 19-file reviewed Asura source ZIP",
+  "archive_sha256": "03d1760931bffa8f6e26f0c0ab086dc2b2ff4c1a253992fdd579e9c58e1be4c2",
+  "imported_files_sha256": {
+    "src/shiori-v3/power_ui.py": "4b5e2cfd37f7449c3dc3415ef5641b75d6d91bd03931a7b0e9e75a9593f2349d",
+    "src/shiori-v3/restore.sh": "a8fd5855410f744e244e187f512c74c3429a4d2094dabf1e9d9a01c5d5c838a6",
+    "src/shiori-v3/app_catalog.py": "1a13c7e8d1346ad1dc8d880c68c44102233b5823efe12176efbc7a003eac3c71",
+    "src/shiori-v3/session-env.sh": "4fa61d6da73d967d5550911071f8126f04d6cd756787da4fa3cb1b9ea0ed7ea8",
+    "src/shiori-v3/power-menu.sh": "d22991c9fbff1f980880d8b2715fcc80b05bde926bf5af7f0314a636b48c6b21",
+    "src/shiori-v3/activate.sh": "733a0190291e38383fa7da2ee53fcc279876a407f59e2eede50ae9003fa1acd0",
+    "src/shiori-v3/power-fallback.sh": "04fa9fcace6e3e0056a75bc8047577434e4eb57132b68b12931ddd37c2aeacab",
+    "src/shiori-v3/launch.sh": "bd81a9528684f0c8329fcdb4a121f6fe7bf77c351fcf6c49719d1b2453f838ca",
+    "src/shiori-v3/power-menu.css": "e74afb7d1fae3b3b0c53f2bcf717beb5d46c942d699d674eba5493f9ca924a11",
+    "src/shiori-v3/dock_state.py": "15ab805ea5f3d2a790d63718d2d2815bbd7ed30c9afdb4c2d5d7c3db02168462",
+    "src/shiori-v3/start.sh": "444a4427cd7ef96b66d99e9b26de0b615a1289e67b9f804a44f57ffa9475c97c",
+    "src/shiori-v3/session-init.sh": "cbe3bdc5add63eb901d44a3742365cadfddae3ef7d783a36c2eba2297e66f1a2",
+    "src/shiori-v3/hud/shiori_hud.py": "4da9c7a12490c9df1e34bdf481db6f1a0d31f6b5bc8bd2a7cf75165db6ee7ba0",
+    "configs/waybar/config": "6569b2643c14316685e79c05724317595a257903f78f86b2a94713ddb3a7f410",
+    "configs/waybar/style.css": "2eb40a83c57c965e89a40642fa02ca3856f6cc27023bc5308c1487112ad271f3",
+    "configs/hypr/hyprpaper.conf": "a3373bcda88948b3ff9b35732ce8c370250461bcd64c4ce73cb38dd3cdd4ad0c",
+    "configs/hypr/hyprland.conf": "9cbe702e24ee9f82c87c12546973d38a778c4ede68097788855290d01197210d",
+    "scripts/helpers/shiori-gpu-status.sh": "75806fdd31facdb3c5696b95ff963bd5bc543cc6b50f9e989bbbf71a9071916c",
+    "scripts/helpers/shiori-cursor-reset": "8a459ca4a250291f36ec65f6f0d1bdcd1cb2fb65fe6734237e1570bdcc25e7fa"
+  }
+}

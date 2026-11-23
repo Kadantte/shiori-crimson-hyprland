@@ -1,0 +1,10 @@
+/* Shiori v3.3.2 Wofi fallback — centered, crimson panel. */
+window { background-color:rgba(18,13,17,.97); border:2px solid #D5232A; border-radius:22px; color:#FFF0D4; font-family:"Noto Sans", sans-serif; font-size:16px; }
+#outer-box { padding:22px; }
+#input { background:#242021; color:#FFF0D4; border:1px solid #F4B845; border-radius:12px; padding:12px; margin-bottom:14px; }
+#scroll { margin-top:8px; }
+#inner-box { background:transparent; }
+#entry { border:1px solid transparent; background-color:rgba(64,28,39,.84); color:#FFF0D4; border-radius:12px; margin:5px 0; padding:15px; }
+#entry:selected { background-color:#812638; border:1px solid #F4B845; }
+#text { color:#FFF0D4; font-weight:700; }
+#text:selected { color:#FFFFFF; }

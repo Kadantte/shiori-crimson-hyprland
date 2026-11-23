@@ -1,0 +1,52 @@
+# Local metadata / generated reports
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+*.log
+*.tmp
+*.bak
+*.swp
+*.swo
+.cache/
+.cache-*/
+.DS_Store
+Thumbs.db
+
+# Local-only private material and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+*.kdbx
+*.sqlite
+*.sqlite3
+*.db
+*.secret
+secrets/
+private/
+local-overrides/
+
+# Build and temporary imports
+build/
+dist/
+_import-staging/
+*.tar
+*.tar.gz
+*.zip
+
+# Raw diagnostics and machine-specific exports (do not commit)
+*diagnostic-*.txt
+*system-info*.txt
+
+# Generated portable preview outputs / local icon cache
+_config-preview/
+waybar-with-installed-icons.css

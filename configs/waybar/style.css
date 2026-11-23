@@ -1,0 +1,71 @@
+/* Shiori Crimson v3.3 — screenshot-inspired Waybar, preserving native interactivity */
+@define-color red #d5232a;
+@define-color ivory #fff0d4;
+* { font-family: "Noto Sans", "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome", sans-serif; font-weight: 600; font-size: 15px; min-height: 0; border: none; box-shadow: none; }
+window#waybar { background: transparent; color: #f6e3e3; }
+window#waybar.shiori-main .modules-left, window#waybar.shiori-main .modules-center, window#waybar.shiori-main .modules-right,
+window#waybar.shiori-portrait .modules-left, window#waybar.shiori-portrait .modules-right {
+  background: rgba(16,12,15,.91); border:1px solid rgba(164,42,53,.84); border-radius: 16px; padding: 2px 8px;
+}
+window#waybar.shiori-main .modules-center { border-color: rgba(120,38,43,.75); }
+#custom-os { padding: 0 17px; font-weight: 800; font-size:14px; }
+#custom-asura-title { padding: 0 18px; color:#f3e6e7; font-weight:800; }
+#workspaces { padding:0 8px; }
+#workspaces button { border:1px solid rgba(90,58,61,.9); border-radius:9px; min-height:27px; min-width:25px; padding:0 8px; margin:0 3px; color:#dbc8ce; background:rgba(38,28,32,.85); }
+#workspaces button.active { background: #b92335; color:white; border-color:#d84f63; }
+#workspaces button:hover { background:rgba(166,42,55,.7); }
+#cpu, #memory, #network, #pulseaudio, #custom-gpu, #clock, #custom-power, #tray { padding: 0 13px; color:#f5e5e6; }
+#cpu, #memory, #custom-gpu { border-right:1px solid rgba(154,49,57,.55); }
+#clock { color:white; font-weight:700; }
+#custom-power { color:#f5b7bb; font-size:18px; }
+window#waybar.shiori-portrait .modules-left, window#waybar.shiori-portrait .modules-right { padding:2px 6px; }
+window#waybar.shiori-portrait #custom-portrait { color: #f2b7c0; padding:0 7px; }
+window#waybar.shiori-portrait #cpu, window#waybar.shiori-portrait #memory, window#waybar.shiori-portrait #clock { padding:0 5px; }
+window#waybar.shiori-dock .modules-center {
+  background:rgba(22,17,21,.93); border: 1px solid rgba(203,65,80,.92); border-radius:22px; padding:7px 13px;
+}
+window#waybar.shiori-dock .modules-left, window#waybar.shiori-dock .modules-right { background:transparent; }
+window#waybar.shiori-dock #custom-dock-ubuntu,
+window#waybar.shiori-dock #custom-dock-chrome,
+window#waybar.shiori-dock #custom-dock-code,
+window#waybar.shiori-dock #custom-dock-terminal,
+window#waybar.shiori-dock #custom-dock-files,
+window#waybar.shiori-dock #custom-dock-system,
+window#waybar.shiori-dock #custom-dock-discord,
+window#waybar.shiori-dock #custom-dock-spotify,
+window#waybar.shiori-dock #custom-dock-docker,
+window#waybar.shiori-dock #custom-dock-apps {
+  padding: 7px 16px; margin:0 3px; min-width:38px; border-radius:13px;
+  font-family:"Font Awesome 6 Brands", "Font Awesome 5 Brands", "Font Awesome 5 Free", "FontAwesome", sans-serif;
+  font-size:28px; color:#ffe4e3; background:rgba(48,35,42,.93); transition:background 170ms ease;
+}
+window#waybar.shiori-dock #custom-dock-ubuntu { font-family:"Noto Sans",sans-serif; background:rgba(202,59,51,.85); color:white; }
+window#waybar.shiori-dock #custom-dock-chrome { color:#ffbe62; }
+window#waybar.shiori-dock #custom-dock-code { color:#45c1fe; }
+window#waybar.shiori-dock #custom-dock-system { color:#c6d0db; }
+window#waybar.shiori-dock #custom-dock-discord { color:#8f99ff; }
+window#waybar.shiori-dock #custom-dock-spotify { color:#44dd80; }
+window#waybar.shiori-dock #custom-dock-docker { color:#53bbf8; }
+window#waybar.shiori-dock #custom-dock-ubuntu:hover,
+window#waybar.shiori-dock #custom-dock-chrome:hover,
+window#waybar.shiori-dock #custom-dock-code:hover,
+window#waybar.shiori-dock #custom-dock-terminal:hover,
+window#waybar.shiori-dock #custom-dock-files:hover,
+window#waybar.shiori-dock #custom-dock-system:hover,
+window#waybar.shiori-dock #custom-dock-discord:hover,
+window#waybar.shiori-dock #custom-dock-spotify:hover,
+window#waybar.shiori-dock #custom-dock-docker:hover,
+/* Use background-color, not background shorthand: preserve PNG background-image on hover. */
+window#waybar.shiori-dock #custom-dock-apps:hover { background-color:rgba(170,42,58,.65); }
+
+/* Runtime icon backgrounds are resolved from the user's installed applications.
+   `start-waybar.sh` renders a cache-only overlay using Gio/GTK; no logos are bundled.
+   Without matching installed icons, generic dock glyphs remain visible. */
+
+/* Shiori v3.3 dock-state indicators: SVG/PNG backgrounds are never cleared on hover. */
+window#waybar.shiori-dock .running { border-bottom: 3px solid rgba(244,184,69,.72); }
+window#waybar.shiori-dock .focused { border-bottom: 3px solid #D5232A; background-color: rgba(110,31,41,.88); }
+window#waybar.shiori-dock .idle { border-bottom: 3px solid transparent; }
+window#waybar.shiori-dock .running:hover,
+window#waybar.shiori-dock .focused:hover,
+window#waybar.shiori-dock .idle:hover { background-color: rgba(170,42,58,.65); }

@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# Allow the desktop and displays to initialize.
+sleep 8
+
+# Hyprland only; never affect GNOME.
+[[ -n "${HYPRLAND_INSTANCE_SIGNATURE:-}" ]] || exit 0
+
+# Never touch another display if the LG isn't connected.
+hyprctl monitors | grep -q '^Monitor DP-6 ' || exit 0
+
+# Always try to restore the display.
+trap 'hyprctl dispatch dpms on DP-6 >/dev/null 2>&1 || true' EXIT
+
+hyprctl dispatch dpms off DP-6
+sleep 2
+hyprctl dispatch dpms on DP-6

@@ -1,0 +1,246 @@
+[
+  {
+    "name": "shiori-main",
+    "output": "{{MAIN_OUTPUT}}",
+    "layer": "top",
+    "position": "top",
+    "height": 51,
+    "margin-top": 5,
+    "margin-left": 7,
+    "margin-right": 7,
+    "spacing": 8,
+    "modules-left": [
+      "custom/os",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [
+      "custom/asura-title"
+    ],
+    "modules-right": [
+      "cpu",
+      "memory",
+      "custom/gpu",
+      "pulseaudio",
+      "network",
+      "clock",
+      "custom/power"
+    ],
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "on-click": "activate",
+      "all-outputs": false,
+      "disable-scroll": true,
+      "sort-by": "number",
+      "persistent-workspaces": {
+        "{{MAIN_OUTPUT}}": [
+          1,
+          2,
+          3,
+          4,
+          5
+        ]
+      }
+    },
+    "hyprland/window": {
+      "format": "{title}",
+      "max-length": 48,
+      "separate-outputs": true,
+      "tooltip": false
+    },
+    "cpu": {
+      "format": " {usage}%",
+      "interval": 5,
+      "tooltip": true,
+      "on-click": "gnome-system-monitor"
+    },
+    "memory": {
+      "format": " {used:0.1f} / {total:0.0f} GiB",
+      "interval": 10,
+      "on-click": "gnome-system-monitor"
+    },
+    "network": {
+      "format-ethernet": "",
+      "format-linked": "",
+      "format-disconnected": "",
+      "tooltip-format-ethernet": "Ethernet: {ifname} — {ipaddr}",
+      "tooltip-format-disconnected": "Ethernet disconnected (Wi-Fi may still work)",
+      "interval": 10,
+      "on-click": "nm-connection-editor"
+    },
+    "pulseaudio": {
+      "format": "",
+      "format-muted": "",
+      "scroll-step": 5,
+      "on-click": "pavucontrol",
+      "on-click-right": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "tooltip-format": "Default output volume: {volume}%\nClick for audio mixer"
+    },
+    "custom/gpu": {
+      "format": " GPU",
+      "tooltip": "Click for one-time NVIDIA status (no continuous polling)",
+      "on-click": "~/.config/waybar/scripts/shiori-gpu-status.sh"
+    },
+    "clock": {
+      "format": "{:%a, %b %d %H:%M}",
+      "tooltip-format": "<tt>{calendar}</tt>",
+      "interval": 60
+    },
+    "tray": {
+      "icon-size": 17,
+      "spacing": 9
+    },
+    "custom/os": {
+      "format": "◉  Ubuntu 26.04.1 LTS",
+      "tooltip": "Shiori Crimson v3.3 · Ubuntu 26.04.1 LTS",
+      "on-click": "~/.config/shiori-v3/launch.sh launcher"
+    },
+    "custom/asura-title": {
+      "format": "△  Hyprland — Asura",
+      "tooltip": "Shiori Crimson v3.3 · {{MAIN_OUTPUT}} main display"
+    },
+    "custom/power": {
+      "format": "⏻",
+      "tooltip": "Power options (confirmation required)",
+      "on-click": "~/.config/shiori-v3/launch.sh power"
+    }
+  },
+  {
+    "name": "shiori-portrait",
+    "output": "{{PORTRAIT_OUTPUT}}",
+    "layer": "top",
+    "position": "top",
+    "height": 41,
+    "margin-top": 9,
+    "margin-left": 12,
+    "margin-right": 12,
+    "spacing": 6,
+    "modules-left": [
+      "custom/portrait",
+      "hyprland/workspaces"
+    ],
+    "modules-center": [],
+    "modules-right": [
+      "cpu",
+      "memory",
+      "clock"
+    ],
+    "custom/portrait": {
+      "format": "⛩  SHIORI",
+      "tooltip": "ASUS MG248 · Portrait workspace",
+      "on-click": "~/.config/shiori-v3/launch.sh launcher"
+    },
+    "hyprland/workspaces": {
+      "format": "{name}",
+      "on-click": "activate",
+      "all-outputs": false,
+      "disable-scroll": true,
+      "sort-by": "number"
+    },
+    "cpu": {
+      "format": "CPU {usage}%",
+      "interval": 8
+    },
+    "memory": {
+      "format": "RAM {percentage}%",
+      "interval": 10
+    },
+    "clock": {
+      "format": " {:%H:%M}",
+      "tooltip-format": "<tt>{calendar}</tt>",
+      "interval": 60
+    }
+  },
+  {
+    "name": "shiori-dock",
+    "output": "{{MAIN_OUTPUT}}",
+    "layer": "top",
+    "position": "bottom",
+    "height": 76,
+    "exclusive": true,
+    "margin-bottom": 15,
+    "margin-left": 0,
+    "margin-right": 0,
+    "spacing": 6,
+    "modules-left": [],
+    "modules-center": [
+      "custom/dock-ubuntu",
+      "custom/dock-chrome",
+      "custom/dock-code",
+      "custom/dock-terminal",
+      "custom/dock-files",
+      "custom/dock-system",
+      "custom/dock-discord",
+      "custom/dock-spotify",
+      "custom/dock-docker",
+      "custom/dock-apps"
+    ],
+    "modules-right": [],
+    "custom/dock-files": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh nautilus",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state nautilus",
+      "return-type": "json",
+      "interval": 3
+    },
+    "custom/dock-terminal": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh kitty",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state kitty",
+      "return-type": "json",
+      "interval": 3
+    },
+    "custom/dock-system": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh monitor",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state monitor",
+      "return-type": "json",
+      "interval": 3
+    },
+    "width": 915,
+    "custom/dock-ubuntu": {
+      "format": "◉",
+      "tooltip": "Show applications",
+      "on-click": "~/.config/shiori-v3/launch.sh launcher"
+    },
+    "custom/dock-code": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh code",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state code",
+      "return-type": "json",
+      "interval": 3
+    },
+    "custom/dock-discord": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh discord",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state discord",
+      "return-type": "json",
+      "interval": 3
+    },
+    "custom/dock-spotify": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh spotify",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state spotify",
+      "return-type": "json",
+      "interval": 3
+    },
+    "custom/dock-docker": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh docker",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state docker",
+      "return-type": "json",
+      "interval": 3
+    },
+    "custom/dock-apps": {
+      "format": "",
+      "tooltip": "Application launcher",
+      "on-click": "~/.config/shiori-v3/launch.sh launcher"
+    },
+    "custom/dock-chrome": {
+      "format": "{text}",
+      "on-click": "{{HOME}}/.config/shiori-v3/launch.sh chrome",
+      "exec": "python3 {{HOME}}/.config/shiori-v3/dock_state.py state chrome",
+      "return-type": "json",
+      "interval": 3
+    }
+  }
+]
