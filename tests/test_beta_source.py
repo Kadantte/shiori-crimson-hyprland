@@ -48,7 +48,7 @@ class BetaSourceTests(unittest.TestCase):
             self.assertIn('{{MAIN_OUTPUT}}',s)
         json.loads((ROOT/'configs/waybar/config').read_text())
 
-    def test_no_live_installer(self):
+    def test_no_legacy_uncontrolled_installer(self):
         self.assertFalse((ROOT/'install.sh').exists())
         self.assertFalse((ROOT/'apply.sh').exists())
 

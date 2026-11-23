@@ -3,6 +3,7 @@ on:
   pull_request:
   push:
     branches: [main, develop]
+    tags: ["v*-beta.*"]
 permissions:
   contents: read
 jobs:
@@ -13,7 +14,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Unit tests
-        run: python3 -m unittest discover -s tests -v
-      - name: Check public files and image register
-        run: python3 scripts/prepublish.py
+      - name: Offline source beta release checks
+        run: python3 scripts/beta_release_check.py
+      - name: Confirm tag/version match (tag builds only)
+        if: startsWith(github.ref, 'refs/tags/')
+        run: test "$(cat VERSION)" = "$GITHUB_REF_NAME"
