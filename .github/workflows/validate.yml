@@ -2,7 +2,7 @@ name: Repository checks
 on:
   pull_request:
   push:
-    branches: [main, develop]
+    branches: [main, develop, "release/**"]
     tags: ["v*-beta.*"]
 permissions:
   contents: read
