@@ -1,0 +1,1 @@
+# shiori-crimson-hyprland
